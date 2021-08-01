@@ -1,14 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-
+import { useRouter } from "next/router";
 import { useCart } from "context";
+import Link from "next/link";
 
 export const Navbar = () => {
   const { cart } = useCart();
+  const { pathname } = useRouter();
 
-  const quantity = cart?.line_items?.length || 0;
+  const quantity = cart?.total_items || 0;
+
+  const displayCartItems = !!quantity && !/checkout/.test(pathname);
 
   return (
-    <nav className='bg-gray-800'>
+    <nav className='bg-gray-800 overflow-x-hidden'>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -74,8 +78,18 @@ export const Navbar = () => {
           <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
             <button className='bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
               <span className='sr-only'>View notifications</span>
-
-              <CartIcon />
+              <Link href='/cart' passHref>
+                <div className='relative'>
+                  <a>
+                    <CartIcon />
+                  </a>
+                  {displayCartItems && (
+                    <div className=' bg-red-600 text-white font-semibold rounded-full absolute px-2 -top-4 left-3 md:left-6'>
+                      {quantity}
+                    </div>
+                  )}
+                </div>
+              </Link>
             </button>
           </div>
         </div>

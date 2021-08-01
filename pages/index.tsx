@@ -10,7 +10,7 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = ({ products }) => {
   return (
-    <div>
+    <div className='w-full bg-gray-500 '>
       <h1> Hi</h1>
       {products.map(phone => (
         <div key={phone.id} className=''>
