@@ -48,13 +48,13 @@ tbc
 
 Licensed under the MIT License.
 
-See [LICENSE]() for more information.
+See [LICENSE](https://github.com/kubo550/ecommerce/blob/main/LICENSE) for more information.
 
 
 ## For Developers - Usage
 
-1. Download repo to your computer.  ``` git clone ```
+1. Download repo to your computer.  ``` git clone https://github.com/kubo550/ecommerce.git ```
 2. Get into project main folder and install all dependencies ``` npm i ``` *or if you are using yarn* ``` yarn ``` 
-3. Create **.env** file add create environment variables. see [example]()
+3. Create **.env** file add create environment variables. see [example](https://github.com/kubo550/ecommerce/blob/main/.env.example)
 4. Start development server ``` npm run dev ``` *or*  ``` yarn dev ```
 5. Case of any problem fell free to send me direct message on github.
