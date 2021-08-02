@@ -4,10 +4,14 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 
 ## Payment Default Credentials 
 
+---
 To test online payment with Stripe enter this values:
 
----
-title: "hello"
+|  Cart Number |  MM  | YY |  CVC  | Post Code  |
+|---|---|---|---|---|
+| 4242 4242 4242 4242  | 04  | 24  | 242  |   |
+
+
 
 ---
 
