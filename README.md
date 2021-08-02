@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce
 
-## Getting Started
+Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 
-First, run the development server:
+## Payment Default Credentials 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**To test online payment with Stripe enter this values**:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+|  Cart Number |  MM  | YY |  CVC  | Post Code  |
+|---|---|---|---|---|
+| 4242 4242 4242 4242  | 04  | 24  | 242  | 424242  |
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Next](https://img.shields.io/badge/-Next.js-05122A?style=flat&logo=Next.js)&nbsp;
+![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;
+![tailwindCSS](https://img.shields.io/badge/tailwindcss-05122A.svg?&style=flat&logo=tailwind-css&logoColor=white")&nbsp;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Also in project
 
-## Deploy on Vercel
+* HeadlessCMS [commerce.js](https://commercejs.com/)
+* Online payment [stripe](https://stripe.com/en-pl)
+* Form Validator [yup](https://www.npmjs.com/package/yup?activeTab=readme)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NPM Packages
+* [react-hook-form](https://react-hook-form.com/advanced-usage)
+* [framer-motion](https://www.framer.com/motion/)
+* nProgress
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Features 
+
+* RWD (Mobile First Design)
+* SSG
+* React Context
+
+
+## Preview
+
+tbc
+
+## License 
+
+Licensed under the MIT License.
+
+See [LICENSE]() for more information.
+
+
+## For Developers - Usage
+
+1. Download repo to your computer.  ``` git clone ```
+2. Get into project main folder and install all dependencies ``` npm i ``` *or if you are using yarn* ``` yarn ``` 
+3. Create **.env** file add create environment variables. see [example]()
+4. Start development server ``` npm run dev ``` *or*  ``` yarn dev ```
+5. Case of any problem fell free to send me direct message on github.
