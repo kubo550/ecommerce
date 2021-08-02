@@ -27,6 +27,7 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 * HeadlessCMS [commerce.js](https://commercejs.com/)
 * Online payment [stripe](https://stripe.com/en-pl)
 * Form Validator [yup](https://www.npmjs.com/package/yup?activeTab=readme)
+* SVG icons from [heroicons](https://heroicons.com/) 
 
 NPM Packages
 * [react-hook-form](https://react-hook-form.com/advanced-usage)
