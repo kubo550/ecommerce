@@ -1,6 +1,7 @@
+import { Route } from "components";
 import { useCart } from "context";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 const Cart: FC = ({ }) => {
   const { cart, updateCart } = useCart();
@@ -10,7 +11,7 @@ const Cart: FC = ({ }) => {
   }
 
   return (
-    <div>
+    <Route title="Yuor Shopping Cart" >
       Cart
       <div>
         {cart.line_items.length ? (
@@ -45,7 +46,7 @@ const Cart: FC = ({ }) => {
           </div>
         )}
       </div>
-    </div>
+    </Route>
   );
 };
 

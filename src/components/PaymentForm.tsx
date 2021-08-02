@@ -72,11 +72,11 @@ export const PaymentForm: FC<PaymentFormProps> = ({
         },
       },
     };
+
+    // TEST MODE IS ON
+
     try {
       await commerce.checkout.capture(checkoutToken.id, orderData);
-      // tu się udało
-      // nextStep();
-      // refreshCart();
     } catch (e) {
       console.log(e.message);
     } finally {

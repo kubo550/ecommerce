@@ -2,6 +2,7 @@
 import { useRouter } from "next/router";
 import { useCart } from "context";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const Navbar = () => {
   const { cart } = useCart();
@@ -51,27 +52,6 @@ export const Navbar = () => {
                 >
                   Dashboard
                 </a>
-
-                <a
-                  href='#'
-                  className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  Team
-                </a>
-
-                <a
-                  href='#'
-                  className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  Projects
-                </a>
-
-                <a
-                  href='#'
-                  className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  Calendar
-                </a>
               </div>
             </div>
           </div>
@@ -83,11 +63,21 @@ export const Navbar = () => {
                   <a>
                     <CartIcon />
                   </a>
-                  {displayCartItems && (
-                    <div className=' bg-red-600 text-white font-semibold rounded-full absolute px-2 -top-4 left-3 md:left-6'>
-                      {quantity}
-                    </div>
-                  )}
+                  <AnimatePresence exitBeforeEnter>
+                    {displayCartItems && (
+                      <motion.div
+                        initial={{ scale: 0.1, rotate: "0" }}
+                        animate={{
+                          scale: 1,
+                          rotate: ["40deg", "-20deg", "20deg", "-10deg", "0"],
+                        }}
+                        exit={{ scale: 0.1, y: -5 }}
+                        className=' bg-red-600 text-white font-semibold rounded-full absolute px-2 -top-4 left-3 md:left-6'
+                      >
+                        {quantity}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               </Link>
             </button>
