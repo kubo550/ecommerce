@@ -15,6 +15,25 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 ---
 
 
+## Preview
+
+<details>
+  <summary> Mobile </summary>
+ 
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile1.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile2.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile3.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile4.jpg)
+  
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile5.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile6.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile7.jpg)
+  ![preview mobile](https://raw.githubusercontent.com/kubo550/ecommerce/main/preview/mobile8.jpg)
+  
+  
+  
+</details>
+
 
 ## Tech Stack
 
