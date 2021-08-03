@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FC } from "react";
+import type { FC } from "react";
 import type { Product } from "@chec/commerce.js/types/product";
 
 interface ProductsProps {
@@ -10,24 +10,36 @@ interface ProductsProps {
 
 export const ProductList: FC<ProductsProps> = ({ products }) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-10'>
+    <div className='grid grid-cols-1 gap-y-5 sm:grid-cols-2 md:grid-cols-3 mb-10 '>
       {products.map(phone => (
         <motion.div
           layout
           layoutId={phone.id}
           key={phone.id}
-          className='flex flex-col items-center'
+          className='flex flex-col items-stretch '
         >
-          <Image
-            src={phone.media.source}
-            alt={phone.name}
-            width={300}
-            height={250}
-            className=''
-          />
-          <Link href={`/product/${phone.id}`}>
-            <a> {phone.name} </a>
-          </Link>
+          <div className='text-center'>
+            <Link href={`/product/${phone.id}`}>
+              <a title="Check more details" >
+                <Image
+                  src={phone.media.source}
+                  blurDataURL={phone.media.source}
+                  placeholder='blur'
+                  alt={phone.name}
+                  width={300}
+                  height={250}
+                  className='mx-auto'
+                />
+              </a>
+            </Link>
+          </div>
+
+          <div className='flex flex-col mx-16'>
+            <Link href={`/product/${phone.id}`}>
+              <a className='font-semibold text-gray-800'> {phone.name} </a>
+            </Link>
+            <b> {phone.price.formatted} zł </b>
+          </div>
         </motion.div>
       ))}
 

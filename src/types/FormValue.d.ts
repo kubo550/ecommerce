@@ -3,7 +3,7 @@ export type FormValue = {
     lastname: string
     phone: string;
     email: string;
-    address1: string;
+    address: string;
     zip: string
     city: string;
 }

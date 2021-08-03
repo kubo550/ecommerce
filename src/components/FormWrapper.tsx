@@ -4,9 +4,10 @@ interface FormWrapperProps {
     step: number;
     totalSteps: number;
 }
+
 export const FormWrapper: FC<FormWrapperProps> = ({ children, step, totalSteps }) => {
     return (
-        <div className='min-h-full bg-green-900 pb-20 flex flex-col items-start mt-4 text-gray-900 antialiased relative'>
+        <div className='min-h-full bg-green-900 pb-20 z-20 flex flex-col items-start my-4 text-gray-900 antialiased relative'>
             <div
                 style={{
                     clipPath: "polygon(0 0, 100% 0, 100% 80%, 0% 100%)",
@@ -19,7 +20,7 @@ export const FormWrapper: FC<FormWrapperProps> = ({ children, step, totalSteps }
                     Shipping <span className='text-yellow-500'>Details</span>
                 </h1>
                 <p className='text-green-200 mt-2'>
-                    Become a new member in 3 easy steps
+                    Make a payment in 3 easy steps.
                 </p>
             </div>
             <div className='max-w-xl w-full mt-8 rounded-lg shadow-2xl bg-white mx-auto overflow-hidden z-10'>

@@ -1,51 +1,39 @@
-import { commerce } from "lib";
-import { useState } from "react";
-import { ProductList, Route } from "components";
-import type { GetStaticPaths, GetStaticProps } from "next";
-import type { FC } from "react";
-import type { Product } from "@chec/commerce.js/types/product";
+/* eslint-disable @next/next/no-img-element */
+import { Route } from "components";
+import { RightArrow } from "icons";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Link from "next/link";
 
-interface HomeProps {
-  products: Product[];
-}
-
-const Home: FC<HomeProps> = ({ products }) => {
-  const [searching, setSearching] = useState("");
-
-  const displayProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searching.toLowerCase())
-  );
-
-  return (
-    <Route>
-      <div className='w-full '>
-        <h1 className='text-center font-semibold text-base md:text-2xl my-5 md:my-8'>
-          Test store to learn e-commerce with nextjs
-        </h1>
-
-        <div className='flex justify-center items-center my-5 '>
-          <input
-            onChange={({ target: { value } }) => setSearching(value)}
-            type='search'
-            className='bg-purple-white rounded border-0 p-3 shadow-xl w-56 md:w-80'
-            placeholder='Search by name...'
-          />
-        </div>
-
-        <ProductList products={displayProducts} />
-      </div>
-    </Route>
-  );
+const Home = () => {
+    return (
+        <Route>
+            <div className='mt-12'>
+                <div className=' md:max-w-md xl:max-w-xl z-40'>
+                    <h1 className=' text-2xl md:text-6xl font-serif'>
+                        The easiest way to upgrade to the latest smartphone.
+                    </h1>
+                    <p className='text-gray-700 text-xl mt-9'>
+                        If you’re a current member of the iPhone Upgrade Program and enter
+                        the Social Security number you used when you first joined the
+                        program.
+                    </p>
+                    <Link href='/products'>
+                        <a>
+                            <button className='w-52 bg-gradient-to-bl rounded-lg tracking-wider from-green-500 to-green-800 text-yellow-50 text-base md:text-xl px-4 py-3 mt-11 uppercase '>
+                                Explore <RightArrow />
+                            </button>
+                        </a>
+                    </Link>
+                </div>
+                <img
+                    className='absolute max-w-md bottom-36 hidden md:block right-8 md:right-20 xl:right-36 '
+                    src='/images/phone-in-hand-42.png'
+                    alt='phone'
+                />
+            </div>
+        </Route>
+    );
 };
 
-export const getStaticProps: GetStaticProps = async ctx => {
-  const { data } = await commerce.products.list();
-
-  return {
-    props: {
-      products: data,
-    },
-  };
-};
 
 export default Home;

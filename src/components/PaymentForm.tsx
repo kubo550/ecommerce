@@ -11,6 +11,7 @@ import type { FormValue } from "types";
 import type { CheckoutCapture } from "@chec/commerce.js/types/checkout-capture";
 import type { CheckoutToken } from "@chec/commerce.js/types/checkout-token";
 import { useCart } from "context";
+import Loader from "react-loader-spinner";
 
 interface PaymentFormProps {
   prevStep: () => void;
@@ -60,7 +61,7 @@ export const PaymentForm: FC<PaymentFormProps> = ({
       },
       shipping: {
         name: "National",
-        street: shippingData.address1,
+        street: shippingData.address,
         town_city: shippingData.city,
         postal_zip_code: shippingData.zip,
       },
@@ -74,7 +75,6 @@ export const PaymentForm: FC<PaymentFormProps> = ({
     };
 
     // TEST MODE IS ON
-
     try {
       await commerce.checkout.capture(checkoutToken.id, orderData);
     } catch (e) {
@@ -101,7 +101,7 @@ export const PaymentForm: FC<PaymentFormProps> = ({
                   Back
                 </button>
                 <button className='px-3 py-2' type='submit'>
-                  {paying ? "..." : `PAY ${checkoutToken.live.total.formatted} zł`}
+                  {paying ? <Loader type='ThreeDots' width={80} color='#0077b6' height={24} /> : `PAY ${checkoutToken.live.total.formatted} zł`}
                 </button>
               </div>
             </form>

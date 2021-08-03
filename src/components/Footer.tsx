@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <footer className='mt-auto py-8 bg-gray-800 flex flex-col justify-center items-center'>
-      <p className='my-2 font-semibold '>
+    <footer className='mt-auto py-8 bg-gray-800 flex flex-col z-10 justify-center items-center'>
+      <p className='my-2 font-semibold text-yellow-100'>
         Check this and my other projects
         <a
           href='https://github.com/kubo550'
@@ -10,7 +10,7 @@ export const Footer = () => {
           <GithubIcon />
         </a>
       </p>
-      <p className='my-2 font-semibold '> © 2020 Copyright 2021 Jakub Kurdziel</p>
+      <p className='my-2 font-semibold text-yellow-100'> © 2020 Copyright 2021 Jakub Kurdziel</p>
     </footer>
   );
 };
@@ -20,7 +20,7 @@ const GithubIcon = () => (
     width='24'
     height='24'
     fill='currentColor'
-    className='text-black ml-2 text-opacity-50 transform translate-y-2'
+    className='text-yellow-500 ml-1 text-opacity-50 transform translate-y-1'
   >
     <path
       fillRule='evenodd'

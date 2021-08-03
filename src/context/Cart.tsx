@@ -10,6 +10,7 @@ interface CartValues {
   addToCart: (productId: string, quantity?: number, onSuccess?: () => void) => Promise<void>;
   updateCart: (productId: string, curentQuan: number, operation: Operation) => Promise<void>;
   refreshCart: () => Promise<void>;
+  removeFromCart: (lineId: string) => Promise<void>
 }
 
 const CartContext = createContext({} as CartValues);
@@ -45,10 +46,7 @@ export const CartProvider: FC = ({ children }) => {
     setCart(update.cart);
   };
 
-  const emptyCart = async () => {
-    const item = await commerce.cart.empty();
-    setCart(item.cart);
-  };
+
 
   const refreshCart = async () => {
     const cart = await commerce.cart.refresh();
@@ -56,7 +54,7 @@ export const CartProvider: FC = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, updateCart, refreshCart }}>
+    <CartContext.Provider value={{ cart, addToCart, updateCart, refreshCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
