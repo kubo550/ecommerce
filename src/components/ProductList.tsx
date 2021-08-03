@@ -16,7 +16,7 @@ export const ProductList: FC<ProductsProps> = ({ products }) => {
           layout
           layoutId={phone.id}
           key={phone.id}
-          className='flex flex-col items-stretch '
+          className='flex flex-col items-center '
         >
           <div className='text-center'>
             <Link href={`/product/${phone.id}`}>
@@ -34,7 +34,7 @@ export const ProductList: FC<ProductsProps> = ({ products }) => {
             </Link>
           </div>
 
-          <div className='flex flex-col mx-16'>
+          <div className='flex flex-col mr-16'>
             <Link href={`/product/${phone.id}`}>
               <a className='font-semibold text-gray-800'> {phone.name} </a>
             </Link>

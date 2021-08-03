@@ -36,7 +36,7 @@ const Product: FC<ProductProps> = ({ product }) => {
         <button className='absolute z-50 transform -translate-y-4 translate-x-2 text-gray-800' onClick={router.back}>Back</button>
 
         <motion.div layout layoutId={product.id} className='text-center'>
-          <Image src={product.media.source} alt={product.seo.title!} width={400} height={300} />
+          <Image src={product.media.source} alt={product.seo.title!} width={400} height={350} />
         </motion.div>
 
         <div className='px-3 flex flex-col  justify-between'>

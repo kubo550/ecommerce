@@ -7,7 +7,7 @@ import Link from "next/link";
 const Home = () => {
     return (
         <Route>
-            <div className='mt-12'>
+            <div className='mt-12 px-2'>
                 <div className=' md:max-w-md xl:max-w-xl z-40'>
                     <h1 className=' text-2xl md:text-6xl font-serif'>
                         The easiest way to upgrade to the latest smartphone.

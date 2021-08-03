@@ -47,7 +47,7 @@ export const CartItems: FC<CartItemProps> = ({ items }) => {
                   {item.name}
                 </div>
               </td>
-              <td> {item.price.formatted} zł</td>
+              <td> {item.price.formatted} <span className="hidden sm:inline-block"> zł </span></td>
               <td className=''>
                 <div className='flex flex-row items-stretch justify-center mb-auto'>
                   <button
@@ -67,7 +67,7 @@ export const CartItems: FC<CartItemProps> = ({ items }) => {
                   </button>
                 </div>
               </td>
-              <td> {total} zł </td>
+              <td>{total} <span className=" hidden sm:inline-block"> zł </span>  </td>
               <td>
                 <button onClick={removeItem}>
                   <DeleteIcon />
