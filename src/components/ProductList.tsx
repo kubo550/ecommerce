@@ -27,7 +27,7 @@ export const ProductList: FC<ProductsProps> = ({ products }) => {
                   placeholder='blur'
                   alt={phone.name}
                   width={300}
-                  height={250}
+                  height={300}
                   className='mx-auto'
                 />
               </a>
