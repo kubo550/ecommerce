@@ -14,8 +14,9 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 
 ---
 
-
 ## Preview
+
+[LIVE](https://lucid-wescoff-783163.netlify.app/) deployed on netlify
 
 <details>
   <summary> Mobile </summary>
@@ -41,7 +42,6 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
   ![4](https://user-images.githubusercontent.com/43968748/128085368-05e1ed74-259a-4ede-9f38-9810a933a6cb.PNG)
   ![5](https://user-images.githubusercontent.com/43968748/128085383-57b22e3e-295a-47eb-a375-328f573b655a.PNG)
   ![6](https://user-images.githubusercontent.com/43968748/128085389-5e063d14-30b5-46b2-8f34-14acf98d1b5a.PNG)
-
   
   </details>
 
@@ -50,6 +50,7 @@ Test online store to learn e-commerce with nextjs, headlessCMS & stripe
 ![Next](https://img.shields.io/badge/-Next.js-05122A?style=flat&logo=Next.js)&nbsp;
 ![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;
 ![tailwindCSS](https://img.shields.io/badge/tailwindcss-05122A.svg?&style=flat&logo=tailwind-css&logoColor=white")&nbsp;
+![HeadlessCMS](https://img.shields.io/badge/-commercejs-05122A?style=flat&logo=headlesscms)
 
 ### Also in project
 
@@ -69,10 +70,6 @@ NPM Packages
 * SSG
 * React Context
 
-
-## Preview
-
-tbc
 
 ## License 
 
